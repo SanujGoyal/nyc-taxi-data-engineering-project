@@ -1,0 +1,21 @@
+{
+	"name": "NYCTaxiDataLake",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "NYCTaxiDataLakeStorageConnection",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Taxi2025Data",
+				"fileSystem": "bronzelayer"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
