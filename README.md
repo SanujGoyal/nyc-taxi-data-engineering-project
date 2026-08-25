@@ -52,7 +52,9 @@ For months 10-12,  source dataset will have parameterized URL like :
 
 ***\[Notice 0 removed before month\_value parameter\]***
 
-![][image1]
+
+---
+
 
 **Phase 2 : Data Manipulation using Databricks**
 
