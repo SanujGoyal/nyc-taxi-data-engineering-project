@@ -1,0 +1,21 @@
+{
+	"name": "NYCTaxiDataSinkDataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Trips2025Data",
+				"fileSystem": "bronzelayer"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

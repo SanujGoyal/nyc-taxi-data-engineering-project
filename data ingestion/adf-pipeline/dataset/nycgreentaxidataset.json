@@ -1,0 +1,28 @@
+{
+	"name": "nycgreentaxidataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "IncomingNYCCTaxiDatHttpConnector",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_month_value": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "trip-data/green_tripdata_2025-0@{dataset().p_month_value}.parquet",
+					"type": "Expression"
+				}
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
